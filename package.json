@@ -1,51 +1,47 @@
 {
-    "name": "<pytool-module>",
-    "displayName": "<pytool-display-name>",
-    "description": "Linting support for python files using `<pytool-module>`.",
+    "name": "demo-vscode-extension",
+    "displayName": "Demo vscode extension",
+    "description": "Linting support for python files using `demo-vscode-extension`.",
     "version": "2022.0.0-dev",
     "preview": true,
     "serverInfo": {
-        "name": "<pytool-display-name>",
-        "module": "<pytool-module>"
+        "name": "Demo vscode extension",
+        "module": "demo-vscode-extension"
     },
-    "publisher": "<my-publisher>",
+    "publisher": "marcelldls",
     "license": "MIT",
-    "homepage": "https://github.com/<my-github>/<my-extension-project>",
+    "homepage": "https://github.com/marcelldls/demo-vscode-extension",
     "repository": {
         "type": "git",
-        "url": "https://github.com/<my-github>/<my-extension-project>.git"
+        "url": "https://github.com/marcelldls/demo-vscode-extension.git"
     },
     "bugs": {
-        "url": "https://github.com/<my-github>/<my-extension-project>/issues"
+        "url": "https://github.com/marcelldls/demo-vscode-extension/issues"
     },
     "galleryBanner": {
         "color": "#1e415e",
         "theme": "dark"
     },
     "keywords": [
-        "python",
-        "<pytool-module>"
+        "demo-vscode-extension"
     ],
     "engines": {
         "vscode": "^1.78.0"
     },
     "categories": [
-        "Programming Languages",
-        "Linters",
-        "Formatters"
+        "Programming Languages"
     ],
     "extensionDependencies": [
-        "ms-python.python"
     ],
     "capabilities": {
         "virtualWorkspaces": {
             "supported": false,
-            "description": "Virtual Workspaces are not supported with <pytool-display-name>."
+            "description": "Virtual Workspaces are not supported with Demo vscode extension."
         }
     },
     "activationEvents": [
-        "onLanguage:python",
-        "workspaceContains:*.py"
+        "onLanguage:plaintext",
+        "workspaceContains:*.txt"
     ],
     "main": "./dist/extension.js",
     "scripts": {
@@ -59,12 +55,12 @@
         "lint": "eslint src --ext ts",
         "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
         "test": "node ./out/test/runTest.js",
-        "vsce-package": "vsce package -o <pytool-module>.vsix"
+        "vsce-package": "vsce package -o demo-vscode-extension.vsix"
     },
     "contributes": {
         "configuration": {
             "properties": {
-                "<pytool-module>.args": {
+                "demo-vscode-extension.args": {
                     "default": [],
                     "description": "Arguments passed in. Each argument is a separate item in the array.",
                     "items": {
@@ -73,30 +69,30 @@
                     "scope": "resource",
                     "type": "array"
                 },
-                "<pytool-module>.path": {
+                "demo-vscode-extension.path": {
                     "default": [],
-                    "description": "When set to a path to <pytool-module> binary, extension will use that. NOTE: Using this option may slowdown server response time.",
+                    "description": "When set to a path to demo-vscode-extension binary, extension will use that. NOTE: Using this option may slowdown server response time.",
                     "scope": "resource",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
-                "<pytool-module>.importStrategy": {
+                "demo-vscode-extension.importStrategy": {
                     "default": "useBundled",
-                    "description": "Defines where `<pytool-module>` is imported from. This setting may be ignored if `<pytool-module>.path` is set.",
+                    "description": "Defines where `demo-vscode-extension` is imported from. This setting may be ignored if `demo-vscode-extension.path` is set.",
                     "enum": [
                         "useBundled",
                         "fromEnvironment"
                     ],
                     "enumDescriptions": [
-                        "Always use the bundled version of `<pytool-module>`.",
-                        "Use `<pytool-module>` from environment, fallback to bundled version only if `<pytool-module>` not available in the environment."
+                        "Always use the bundled version of `demo-vscode-extension`.",
+                        "Use `demo-vscode-extension` from environment, fallback to bundled version only if `demo-vscode-extension` not available in the environment."
                     ],
                     "scope": "window",
                     "type": "string"
                 },
-                "<pytool-module>.interpreter": {
+                "demo-vscode-extension.interpreter": {
                     "default": [],
                     "description": "When set to a path to python executable, extension will use that to launch the server and any subprocess.",
                     "scope": "resource",
@@ -105,7 +101,7 @@
                     },
                     "type": "array"
                 },
-                "<pytool-module>.showNotifications": {
+                "demo-vscode-extension.showNotifications": {
                     "default": "off",
                     "description": "Controls when notifications are shown by this extension.",
                     "enum": [
@@ -128,8 +124,8 @@
         "commands": [
             {
                 "title": "Restart Server",
-                "category": "<pytool-display-name>",
-                "command": "<pytool-module>.restart"
+                "category": "Demo vscode extension",
+                "command": "demo-vscode-extension.restart"
             }
         ]
     },

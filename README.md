@@ -30,15 +30,15 @@ You should know to create and work with python virtual environments.
 1. Run `nox --session setup`.
 1. **Optional** Install test dependencies `python -m pip install -r src/test/python_tests/requirements.txt`. You will have to install these to run tests from the Test Explorer.
 1. Open `package.json`, look for and update the following things:
-    1. Find and replace `<pytool-module>` with module name for your tool. This will be used internally to create settings namespace, register commands, etc. Recommendation is to use lower case version of the name, no spaces, `-` are ok. For example, replacing `<pytool-module>` with `pylint` will lead to settings looking like `pylint.args`. Another example, replacing `<pytool-module>` with `black-formatter` will make settings look like `black-formatter.args`.
-    1. Find and replace `<pytool-display-name>` with display name for your tool. This is used as the title for the extension in market place, extensions view, output logs, etc. For example, for the `black` extension this is `Black Formatter`.
+    1. Find and replace `demo-vscode-extension` with module name for your tool. This will be used internally to create settings namespace, register commands, etc. Recommendation is to use lower case version of the name, no spaces, `-` are ok. For example, replacing `demo-vscode-extension` with `pylint` will lead to settings looking like `pylint.args`. Another example, replacing `demo-vscode-extension` with `black-formatter` will make settings look like `black-formatter.args`.
+    1. Find and replace `Demo vscode extension` with display name for your tool. This is used as the title for the extension in market place, extensions view, output logs, etc. For example, for the `black` extension this is `Black Formatter`.
 1. Install node packages using `npm install`.
 1. Go to https://marketplace.visualstudio.com/vscode and create a publisher account if you don't already have one.
-    1. Use the published name in `package.json` by replacing `<my-publisher>` with the name you registered in the marketplace.
+    1. Use the published name in `package.json` by replacing `marcelldls` with the name you registered in the marketplace.
 
 ## Features of this Template
 
-After finishing the getting started part, this template would have added the following. Assume `<pytool-module>` was replaced with `mytool`, and `<pytool-display-name>` with`My Tool`:
+After finishing the getting started part, this template would have added the following. Assume `demo-vscode-extension` was replaced with `mytool`, and `Demo vscode extension` with`My Tool`:
 
 1. A command `My Tool: Restart Server` (command Id: `mytool.restart`).
 1. Following setting:
@@ -151,8 +151,8 @@ This can occurs if `bundled/libs` is empty. That is the folder where we put your
 
 Common one is [_pygls_][pygls] module not found.
 
-# TODO: The maintainer of this repo has not yet edited this file
+# Instructions
 
-**Repo Owner** Make sure you update this. As a repository owner you will need to update this file with specific instructions for your extension.
+Update this file with specific instructions for your extension.
 
 [pygls]: https://github.com/openlawlibrary/pygls

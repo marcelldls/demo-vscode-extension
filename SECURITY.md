@@ -1,6 +1,6 @@
-# TODO: The maintainer of this repo has not yet edited this file
+# Security
 
-**Repo Owner** Make sure you update this. As a repository owner you will need to decide how you want to handle reporting of security issues for your project.
+Decide how you want to handle reporting of security issues for your project.
 
 ---
 
