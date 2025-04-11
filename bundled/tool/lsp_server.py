@@ -124,6 +124,28 @@ def hover(ls: server.LanguageServer, params: lsp.HoverParams):
             ),
         )
 
+@LSP_SERVER.feature(
+    lsp.TEXT_DOCUMENT_SEMANTIC_TOKENS_FULL,
+    lsp.SemanticTokensLegend(
+        token_types=["class", "keyword", "variable"],
+        token_modifiers=[]
+    ),
+)
+def semantic_tokens_full(ls, params: lsp.SemanticTokensParams):
+    """A 'full' semantic tokens request."""
+
+    return lsp.SemanticTokens(data=[
+        0, 0, 3, 0, 0,  # Line, Offset, Length, Type, Modifier
+        0, 3, 3, 1, 0,
+        0, 3, 3, 2, 0,
+        0, 3, 3, 1, 0,
+        0, 3, 3, 0, 0,
+        0, 3, 3, 1, 0,
+        0, 3, 3, 2, 0,
+        0, 3, 3, 1, 0,
+        0, 3, 3, 0, 0,
+    ])
+
 # **********************************************************
 # Required Language Server Initialization and Exit handlers.
 # **********************************************************
